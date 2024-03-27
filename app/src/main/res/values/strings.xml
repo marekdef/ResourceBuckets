@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ResourceBuckets</string>
+    <string name="bucket">n unknown bucket</string>
+    <string name="your_android">Your android carries a</string>
+    <string name="your_dpi">Your dpi is %s</string>
+    <string name="your_resolution_in_px">The resoluton in pixels is %sx%s px</string>
+    <string name="your_resolution_in_dp">The resoluton in dp is %sx%s dp</string>
+    <string name="screen_ratio">Screen ratio is %.03f(px) %.03f(dp)</string>
+    <string name="report_bucket">Report bucket</string>
+    <string name="explanation">Thanks for reporting. In the future I intend to gather this information on some server but this is first iteration so it was just displayed on the screen.</string>
+    <string name="go_back">Go back</string>
+    <string name="bucket_info">When working with xml views (or rarely in compose) I used to wonder what resource bucket my device belongs to? Is it mdpi/xxhdpi or …? I know you can calculate it based on inches and resolution. But isn\'t simpler to launch this app???</string>
+</resources>
