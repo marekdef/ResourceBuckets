@@ -1,5 +1,3 @@
-import com.android.tools.r8.internal.jv
-
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
