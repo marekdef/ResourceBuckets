@@ -40,8 +40,7 @@ class MainActivity : ComponentActivity() {
                 val collectAsState = mainActivityViewModel.uiState.collectAsState()
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                ) {
-                    innerPadding ->
+                ) { innerPadding ->
                     BucketScreen(
                         modifier = Modifier.padding(innerPadding),
                         uiState = collectAsState.value,
@@ -68,13 +67,14 @@ fun BucketScreen(
             onAction = onAction
         )
 
-        MainActivityViewModel.MainUiState.ShowDialog -> BucketInfo(onGoBack)
+        MainActivityViewModel.MainUiState.ShowDialog -> BucketInfo(modifier, onGoBack)
     }
 }
 
 @Composable
-fun BucketInfo(onClose: () -> Unit = {}) {
-    Column(modifier = Modifier.fillMaxSize()) {
+fun BucketInfo(modifier: Modifier = Modifier,
+    onClose: () -> Unit = {}) {
+    Column(modifier = modifier.fillMaxSize()) {
         Text(
             modifier = Modifier
                 .fillMaxWidth()
@@ -185,7 +185,6 @@ fun BucketContent(
         }
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable
