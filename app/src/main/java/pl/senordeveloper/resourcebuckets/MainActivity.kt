@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,11 +35,12 @@ class MainActivity : ComponentActivity() {
             ResourceBucketsTheme {
                 // A surface container using the 'background' color from the theme
                 val collectAsState = mainActivityViewModel.uiState.collectAsState()
-                Surface(
+                Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
                 ) {
+                    innerPadding ->
                     BucketScreen(
+                        modifier = Modifier.padding(innerPadding),
                         uiState = collectAsState.value,
                         onAction = mainActivityViewModel::displayDialog,
                         onGoBack = mainActivityViewModel::goBack
